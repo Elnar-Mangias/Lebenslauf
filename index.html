@@ -1,103 +1,12 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Резюме — Эльнар Исабеков</title>
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    margin: 0;
-    padding: 20px;
-  }
-  .container {
-    max-width: 700px;
-    margin: 0 auto;
-    background: #fff;
-    padding: 20px 30px;
-    border: 1px solid #ccc;
-  }
-  h1 {
-    margin-bottom: 5px;
-  }
-  .role {
-    color: #555;
-    margin-bottom: 20px;
-  }
-  h2 {
-    border-bottom: 2px solid #333;
-    padding-bottom: 5px;
-    margin-top: 25px;
-  }
-  p {
-    line-height: 1.5;
-  }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Резюме — Эльнар Исабеков</title>
 </head>
 <body>
-
-<div id="root"></div>
-
-<script src="https://unpkg.com/react@18/umd/react.development.js"></script>
-<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-
-<script type="text/babel">
-
-  function Header({ fullName, role }) {
-    return (
-      <div>
-        <h1>{fullName}</h1>
-        <p className="role">{role}</p>
-      </div>
-    );
-  }
-
-  function Contacts({ email, phone, birthDate }) {
-    return (
-      <div>
-        <h2>Контакты</h2>
-        <p>Дата рождения: {birthDate}</p>
-        <p>Email: {email}</p>
-        <p>Телефон: {phone}</p>
-      </div>
-    );
-  }
-
-  function Education({ place, info }) {
-    return (
-      <div>
-        <h2>Образование</h2>
-        <p>{place}</p>
-        <p>{info}</p>
-      </div>
-    );
-  }
-
-  function App() {
-    const person = {
-      fullName: "Исабеков Эльнар Эльдияровичь",
-      role: "Программист / разработчик игр",
-      birthDate: "07.05.2008",
-      email: "elnarisabekov91@gmail.com",
-      phone: "0223072008",
-      place: "КГИПИ",
-      info: "Студент, направление: разработка игр."
-    };
-
-    return (
-      <div className="container">
-        <Header fullName={person.fullName} role={person.role} />
-        <Contacts email={person.email} phone={person.phone} birthDate={person.birthDate} />
-        <Education place={person.place} info={person.info} />
-      </div>
-    );
-  }
-
-  ReactDOM.createRoot(document.getElementById("root")).render(<App />);
-</script>
-
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
 </body>
 </html>
